@@ -91,6 +91,10 @@ COPY docker-scripts/init-db.sh /
 # Default values. Can be changed during container start.
 ENV POSTGRES_HOST=postgres \
     POSTGRES_PORT=5432 \
+    POSTGRES_ADMIN_USER=postgres \
+    POSTGRES_ADMIN_PASS=admin \
+    RESTYA_DB_USERNAME=restya \
+    RESTYA_DB_USERPASS=restya \
     RESTYA_DB=restyaboard
 
 RUN chmod +x /docker-entrypoint.sh
